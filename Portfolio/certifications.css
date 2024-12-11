@@ -1,0 +1,182 @@
+/* Basic Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #ffffff;
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+   
+    text-transform: uppercase;
+}
+
+.navbar .navbar-light .navbar-nav .nav-link {
+    color: #007BFF;
+}
+
+.navbar .navbar-light .navbar-nav .nav-link:hover {
+    color: #0056b3;
+}
+
+/* Certification Card Styles */
+.certification-card {
+    background: linear-gradient(135deg, #f8f9fa, #e2e6ea);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid transparent;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certification-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.certification-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.certification-card a {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.certification-card a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Individual Certification Card Colors */
+.certification-card .text-primary {
+    border-left-color: #007BFF;
+}
+
+.certification-card .text-success {
+    border-left-color: #28a745;
+}
+
+.certification-card .text-warning {
+    border-left-color: #ffc107;
+}
+
+.certification-card .text-info {
+    border-left-color: #17a2b8;
+}
+
+.certification-card .text-danger {
+    border-left-color: #dc3545;
+}
+
+.certification-card .text-muted {
+    border-left-color: #6c757d;
+}
+
+.certification-card .text-secondary {
+    border-left-color: #6f42c1;
+}
+
+/* Dark Mode Styles */
+.dark-mode .certification-card {
+    background: linear-gradient(135deg, #444, #555);
+    color: #fff;
+}
+
+.dark-mode .certification-card h3 {
+    color: #90EE90;
+}
+
+/* Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .certification-card {
+        padding: 20px;
+    }
+    .certification-card h3 {
+        font-size: 20px;
+    }
+    .certification-card a {
+        font-size: 14px;
+    }
+}
